@@ -1,7 +1,7 @@
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 20px;
 }
 
 .avatar {
@@ -14,25 +14,15 @@
     text-align: center;
 }
 
-.sidebar {
-    background-color: red;
-    height: 100vh;
-}
-
-.col-6 {
-    width: 40px;
-    background-color: blue;
-}
-
 .grid-container {
     display: grid;
     grid-template-areas: 
-    'header header header header header header header header header header header header'
-    'menu menu main main main main main main main main main main '
-    'menu menu main main main main main main main main main main '
-    'menu menu main main main main main main main main main main '
-    'menu menu main main main main main main main main main main '
-    'menu menu main main main main main main main main main main '
+    'menu menu menu menu menu header header header header header header header'
+    'menu menu menu menu menu main main main main main main main '
+    'menu menu menu menu menu main main main main main main main '
+    'menu menu menu menu menu main main main main main main main '
+    'menu menu menu menu menu main main main main main main main '
+    'menu menu menu menu menu main main main main main main main '
     ;
     height: 100vh;
 }
@@ -40,21 +30,17 @@
     grid-area: footer;
     color: black;
     height: 30px;
-    border: 1px solid red;
 }
 
 .menu {
     grid-area: menu;
-    border: 1px solid black;
     height: 100vh;
 }
 
 .header {
     grid-area: header;
-    border: 1px solid red;
 }
 
 .main {
     grid-area: main;
-    border: 1px solid black;
 }

@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
   users: userInterface[] = [];
   selectedUser: userInterface | null = null
+  sidebarVisible: boolean = false
 
   constructor(private profileService: ProfileService, private router: Router){}
 

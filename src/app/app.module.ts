@@ -1,3 +1,4 @@
+import { SidebarModule } from 'primeng/sidebar';
 import { AuthService } from './service/auth.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,6 +16,9 @@ import { FormsModule } from '@angular/forms';
 import { DashboardModule } from './page/dashboard/dashboard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
+import { MenuModule } from 'primeng/menu';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +36,10 @@ import { ButtonModule } from 'primeng/button';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    ButtonModule
+    ButtonModule,
+    SidebarModule,
+    TableModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,9 +7,50 @@
     </div>
     <div class="main">
         <div class="container">
-                <div class="row">
-        <h3>List of User</h3>
-        <p-button>Hello</p-button>
+            <p-table
+            [value]="users"
+            [paginator]="true"
+            [rows]="5"
+            [showCurrentPageReport]="true"
+            [tableStyle]="{ 'min-width': '30vw' }"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+            [rowsPerPageOptions]="[5, 10, 20]"
+        >
+            <ng-template pTemplate="header">
+                <tr>
+                    <th style="width:25%">Email</th>
+                    <th style="width:25%">First Name</th>
+                    <th style="width:25%">Last Name</th>
+                    <th style="width:25%">Avatar</th>
+                    <th style="width:25%">Actions</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-customer>
+                <tr *ngFor="let user of users">
+                    <td>{{user.email}}</td>
+                    <td>{{user.first_name}}</td>
+                    <td>{{user.last_name}}</td>
+                    <td><img class="avatar" src={{user.avatar}} alt="avatar"></td>
+                    <td></td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="paginatorleft">
+                <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+            </ng-template>
+            <ng-template pTemplate="paginatorright">
+                <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+            </ng-template>
+        </p-table>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <div class="row">
+    <h3>List of User</h3>
+     <p-button>Hello</p-button>
         <table class="dashboard-table">
             <thead>
                 <tr>
@@ -31,10 +72,7 @@
                 </tr>
             </tbody>
         </table>
-    </div>
-        </div>
-    </div>
-</div>
+    </div> -->
 
 
 
