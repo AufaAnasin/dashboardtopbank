@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
 }
 
 .avatar {
@@ -18,7 +17,6 @@
 .sidebar {
     background-color: red;
     height: 100vh;
-    width: 90px;
 }
 
 .col-6 {
@@ -29,12 +27,12 @@
 .grid-container {
     display: grid;
     grid-template-areas: 
-    'menu header header header header header'
-    'menu main main main main main'
-    'menu main main main main main'
-    'menu main main main main main'
-    'menu main main main main main'
-    'menu main main main main main'
+    'header header header header header header header header header header header header'
+    'menu menu main main main main main main main main main main '
+    'menu menu main main main main main main main main main main '
+    'menu menu main main main main main main main main main main '
+    'menu menu main main main main main main main main main main '
+    'menu menu main main main main main main main main main main '
     ;
     height: 100vh;
 }
@@ -43,21 +41,20 @@
     color: black;
     height: 30px;
     border: 1px solid red;
-    height: 30vh;
 }
 
 .menu {
     grid-area: menu;
     border: 1px solid black;
-    width: 200px;
     height: 100vh;
 }
 
 .header {
     grid-area: header;
+    border: 1px solid red;
 }
 
 .main {
     grid-area: main;
-        border: 1px solid black;
+    border: 1px solid black;
 }
