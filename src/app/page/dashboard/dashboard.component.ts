@@ -41,4 +41,9 @@ export class DashboardComponent implements OnInit {
   goToDetail(userId: number) {
     this.router.navigate([`/details/${userId}`])
   }
+
+  goToAdd() {
+    this.router.navigate(['dashboard/add'])
+  }
+
 }
